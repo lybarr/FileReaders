@@ -13,7 +13,8 @@ import java.io.FileNotFoundException;
 public class CaseChanger {
     public static void main(String[] args) {
 
-        System.out.println("\n--------------------------------------\nThis program will change all characters in a file from uppercase to lowercase, and vice-versa. Then it will write the contents to a new file.\n");
+        System.out.println("\n--------------------------------------\n" + 
+            "This program will change all characters in a file from uppercase to lowercase, and vice-versa. Then it will write the contents to a new file.\n");
 
         try{ //Create a file
             File myFile = new File("convertedFile.txt");
