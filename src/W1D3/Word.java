@@ -4,6 +4,7 @@ public class Word {
     private char[] charArray;
     private int length;
 
+
     public Word(char[] charArray){
         this.charArray = charArray;
         this.length = charArray.length;

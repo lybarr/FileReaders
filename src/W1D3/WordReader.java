@@ -8,10 +8,10 @@ public class WordReader {
         Word catWord = new Word(word2);
         Word dogWord2 = new Word(word1);
 
-        // Print a word
+        //Print a word
         System.out.print(dogWord.capitalized() + " are cool.");
 
-        // Check if a word contains a certain character
+        //Check if a word contains a certain character
         char c = 'g';
         if(dogWord.contains(c)){
             System.out.println("\nThe word " + dogWord + " contains '" + c + "'.");
@@ -19,7 +19,7 @@ public class WordReader {
             System.out.println("\n" + dogWord + " does not contain " + c + ".");
         }
 
-        // Give the index of a certain character in a word
+        //Give the index of a certain character in a word
         if(dogWord.indexOf(c) != -1){
             System.out.println("The index of '" + c + "' is: " + dogWord.indexOf(c));
         } else {
