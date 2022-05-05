@@ -71,4 +71,50 @@ public class Word {
         }
         return false;
     }
+
+    public int compareTo(Word toCheck){
+        //return 1 if word is lexicographically after given word
+        //return -1 if word is before
+        //return 0 if equal
+
+        if( length > toCheck.getLength() ){
+            int i= 0;
+            while(charArray[i] > toCheck.getCharAtIndex(i) || charArray[i] == toCheck.getCharAtIndex(i)){
+                for(i= 0; i < toCheck.getLength(); i++){
+                    if(charArray[i] > toCheck.getCharAtIndex(i)){
+                        return 1;
+                    }
+                }
+                return 1;
+            }
+            return -1;
+        }
+
+        if( length < toCheck.getLength() ){
+            int i= 0;
+            while(charArray[i] > toCheck.getCharAtIndex(i) || charArray[i] == toCheck.getCharAtIndex(i)){
+                for(i= 0; i < length; i++){
+                    if(charArray[i] > toCheck.getCharAtIndex(i)){
+                        return 1;
+                    }
+                }
+                return 1;
+            }
+            return -1;
+        }
+
+        if (equals(toCheck)){
+            return 0;
+        }
+        int i = 0;
+        while(charArray[i] > toCheck.getCharAtIndex(i) || charArray[i] == toCheck.getCharAtIndex(i)){
+            for(i= 0; i < length; i++){
+                if(charArray[i] > toCheck.getCharAtIndex(i)){
+                    return 1;
+                }
+            }
+            return 1;
+        }
+        return -1;
+    }
 }
