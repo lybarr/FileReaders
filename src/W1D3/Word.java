@@ -2,7 +2,7 @@ package W1D3;
 
 public class Word {
     private char[] charArray;
-    private int length = 1;
+    private int length;
 
     public Word(char[] charArray){
         this.charArray = charArray;
@@ -41,6 +41,10 @@ public class Word {
         return -1;
     }
 
+    public char getCharAtIndex(int n){
+        return charArray[n];
+    }
+
     public String capitalized(){
         String stringRep = "";
         for(int i = 0; i < length; i++){
@@ -53,13 +57,14 @@ public class Word {
         return stringRep;
     }
 
-    public boolean equals(char[] charArr){
-        if(length == charArr.length){
+    public boolean equals(Word toCheck){
+        if(length == toCheck.getLength()){
             int i= 0;
-            while (charArray[i] == charArr[i])
-            for(i= 0; i < length; i++){
-                if (i == length - 1){
-                    return true;
+            while (charArray[i] == toCheck.getCharAtIndex(i)){
+                for(i= 0; i < length; i++){
+                    if (i == length - 1){
+                        return true;
+                    }
                 }
             }
         }

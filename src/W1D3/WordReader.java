@@ -6,6 +6,7 @@ public class WordReader {
         char[] word2 = new char[]{'c', 'a', 't', 's'};
         Word dogWord = new Word(word1);
         Word catWord = new Word(word2);
+        Word dogWord2 = new Word(word1);
 
         // Print a word
         System.out.print(dogWord.capitalized() + " are cool.");
@@ -25,7 +26,7 @@ public class WordReader {
             System.out.println(c + " was not found.");
         }
 
-        if(dogWord.equals(word2)){
+        if(dogWord.equals(catWord)){
             System.out.println("It's equal.");
         } else {
             System.out.println("It's not equal.");
