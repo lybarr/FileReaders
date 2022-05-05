@@ -1,3 +1,5 @@
+package W1D2;
+
 //////////////////////////////////
 ///   Day 2: Case Changer      ///
 ///   By Lysette Barrera       ///

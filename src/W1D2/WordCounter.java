@@ -1,3 +1,5 @@
+package W1D2;
+
 /////////////////////////////
 ///  Day 2: Word Counter  ///
 ///  By: Lysette Barrera  ///

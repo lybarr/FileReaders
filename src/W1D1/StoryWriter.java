@@ -1,3 +1,5 @@
+package W1D1;
+
 import java.io.*;
 
 public class StoryWriter {
