@@ -10,8 +10,16 @@ public class Word {
         this.length = charArray.length;
     }
 
+    // Set charArray
+    public void setCharArray(char[] charArray){
+        this.charArray = charArray;
+        length = charArray.length;
+    }
+
+    //  Get length
     public int getLength(){return length;}
 
+    // Convert charArray to String,  return String
     public String toString(){
         String stringRep = "";
         for(int i = 0; i < length; i++){
@@ -20,8 +28,10 @@ public class Word {
         return stringRep;
     }
 
+    // Get char at a certain index
     public char charAt(int n) { return charArray[n]; }
 
+    // Returns true if given char is found in charArray
     public boolean contains(char ch){
         for(int i = 0; i < charArray.length; i++){
             if(charAt(i) == ch){
@@ -31,6 +41,7 @@ public class Word {
         return false;
     }
 
+    // Returns the index of given char in charArray
     public int indexOf(char c){
         if(contains(c)){
             for(int i = 0; i < charArray.length; i++){
@@ -42,10 +53,12 @@ public class Word {
         return -1;
     }
 
+    // Returns the char in charArray at given index n
     public char getCharAtIndex(int n){
         return charArray[n];
     }
 
+    // Converts charArray to String and returns capitalized String
     public String capitalized(){
         String stringRep = "";
         for(int i = 0; i < length; i++){
@@ -58,6 +71,7 @@ public class Word {
         return stringRep;
     }
 
+    // Checks if given word is equal to charArray
     public boolean equals(Word toCheck){
         if(length == toCheck.getLength()){
             int i= 0;
@@ -70,6 +84,14 @@ public class Word {
             }
         }
         return false;
+    }
+
+    public char[] substring(int a){
+        char [] charArr = new char[a];
+        for(int i = 0; i < a;i++){
+            charArr[i] =  charArray[i];
+        }
+        return charArr;
     }
 
     public int compareTo(Word toCheck){

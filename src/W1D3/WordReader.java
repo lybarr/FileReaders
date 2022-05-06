@@ -39,5 +39,7 @@ public class WordReader {
         System.out.println("Results  of comparison: " + dogWord.compareTo(dogWord));  //dogs is equal to dogs - return 0
         System.out.println("Results  of comparison: " + dogWord.compareTo(eelWord));  //dogs is before eel -  return -1
         System.out.println("Results  of comparison: " + dogWord.compareTo(dogWord2)); //dogs is after  dog - return 1
+
+        System.out.println(dogWord.substring(2));
     }
 }
